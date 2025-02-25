@@ -13,5 +13,5 @@ jobs:
         uses: maheshaila01/env_secrets/.github/workflows/secrets-passthrough.yml@main
         with: 
             branch_name: ${{ inputs.branch_name }}
-            environment: "pre"
+            environment: "prod"
         secrets: inherit

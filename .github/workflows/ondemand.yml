@@ -10,6 +10,7 @@ on:
 
 jobs:
     publish:
-        uses: maheshaila01/actions_test/.github/workflows/secrets-passthrough.yml@main
+        uses: maheshaila01/env_secrets/.github/workflows/secrets-passthrough.yml@main
         with: 
             branch_name: ${{ inputs.branch_name }}
+            environment: "pre"

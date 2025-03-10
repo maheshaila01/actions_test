@@ -2,11 +2,10 @@ name : On demand build
 
 on:
     workflow_dispatch:
-        inputs:
-            branch_name:
-                type: string
-                required: true
-
+      inputs:
+        branch_name:
+          type: string
+          required: true
 
 jobs:
     publish:

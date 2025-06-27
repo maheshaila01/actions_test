@@ -6,9 +6,13 @@ on:
         branch_name:
           type: string
           required: true
+        services:
+          type: string
+          required: true
 
 jobs:
     publish:
+        if: ${{ contains(github.event.inputs.services || '', 'threedsecure') }}
         uses: maheshaila01/env_secrets/.github/workflows/secrets-passthrough.yml@main
         with: 
             branch_name: ${{ inputs.branch_name }}

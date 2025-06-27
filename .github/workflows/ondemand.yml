@@ -13,7 +13,7 @@ on:
 jobs:
     publish:
         if: ${{ contains(github.event.inputs.services || '', 'threedsecure') }}
-        uses: maheshaila01/env_secrets/.github/workflows/secrets-passthrough.yml@main
+        uses: maheshaila01/env_secrets/.github/workflows/test.yml@main
         with: 
             branch_name: ${{ inputs.branch_name }}
             environment: "prod"
